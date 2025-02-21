@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Website</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: white;
+        color: black;
+      }
+      button {
+        padding: 10px;
+        width: 20%;
+        background-color: rgb(255, 255, 255);
+        color: #211f1f;
+        border: 1px solid #3c3c3c;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Toggle Button</h1>
+
+    <button id="btn" onclick="toggle()">Light</button>
+
+    <script>
+      let heading = document.getElementById("heading");
+      let btn = document.getElementById("btn");
+      let body = document.body;
+
+      function toggle() {
+        let currentBackgroundColor = window.getComputedStyle(body).backgroundColor;
+
+        // Check if the background color is white (light mode)
+        if (currentBackgroundColor === "rgb(255, 255, 255)") {
+          body.style.backgroundColor = "black";  // Dark mode background
+          body.style.color = "white";  // Light mode text
+          btn.textContent = "Dark";  // Change button text to Dark
+        } else {
+          body.style.backgroundColor = "white";  // Light mode background
+          body.style.color = "black";  // Dark mode text
+          btn.textContent = "Light";  // Change button text to Light
+        }
+      }
+    </script>
+  </body>
+</html>
