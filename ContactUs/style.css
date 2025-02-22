@@ -1,0 +1,109 @@
+/* Font Style */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 17, 17);
+  font-family: "ROBOTO MONO";
+}
+
+main {
+  background-color: rgb(17, 17, 17);
+  color: rgb(255, 255, 255);
+  border: 1px solid whitesmoke;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+.images {
+  width: 80%;
+}
+
+.images img {
+  padding: 20px;
+  max-width: 100%;
+  display: inline-block;
+  opacity: 0; /* Initially, the image is invisible */
+  transform: translateY(
+    20px
+  ); /* Start the image 20px below its original position */
+  animation: appearFromBottom 1s ease-out 1s forwards; /* Animation with 1s delay */
+}
+
+/* animation on image */
+
+/* Define the keyframe animation */
+@keyframes appearFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at its original position */
+  }
+}
+
+.line {
+  margin: 10px;
+  width: 50%;
+}
+
+.line h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  line-height: 110%;
+  letter-spacing: 1px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255); /* You can change the color */
+  color: rgb(17, 17, 17);
+  padding: 10px 20px;
+  margin: 20px;
+  font-size: 12px; /* Text size 12px */
+  border: none;
+  border-radius: 50px; /* Capsule shape */
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional for shadow effect */
+  transition: background-color 0.3s ease;
+}
+
+.cta-button .material-symbols-outlined {
+  margin-left: 8px; /* Spacing between text and icon */
+}
+
+/* Media queries */
+
+@media screen and (max-width: 767px) {
+  .line h4 {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 492px) {
+  .line h4 {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+}
