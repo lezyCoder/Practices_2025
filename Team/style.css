@@ -13,6 +13,7 @@ body {
 }
 
 main {
+  border: 1px dotted red;
   background-color: rgb(255, 255, 255);
   color: rgb(17, 17, 17);
   height: 100vh;
@@ -22,9 +23,9 @@ main {
 }
 
 .teamSection {
-  margin: 4rem;
+  padding: 4rem;
   width: 100%;
-  max-height: 100vh;
+  height: 100vh;
 }
 
 .teamHeading {
@@ -34,7 +35,6 @@ main {
   align-items: end;
   grid-template-rows: auto;
   gap: 3rem;
-  border: 1px solid blue;
 }
 
 .heading h2 {
@@ -69,8 +69,6 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  width: 100%;
-  height: 100%;
   border: 1px dotted red;
 }
 
@@ -83,15 +81,14 @@ main {
 }
 
 .teamImage img {
-  width: 270px;
-  height: 400px;
+  width: 245px ;
+  height: 345px;
 }
 
 .teamPosition{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
   margin: 10px 0;
 }
 
@@ -107,7 +104,7 @@ main {
 }
 
 .description{
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 150%;
   font-weight: 300;
   color: rgba(17, 17, 17, .5)
