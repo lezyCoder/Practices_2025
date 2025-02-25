@@ -1,0 +1,114 @@
+/* Font Style */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 17, 17);
+  font-family: "ROBOTO MONO";
+}
+
+main {
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 17, 17);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamSection {
+  margin: 4rem;
+  width: 100%;
+  max-height: 100vh;
+}
+
+.teamHeading {
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: end;
+  grid-template-rows: auto;
+  gap: 3rem;
+  border: 1px solid blue;
+}
+
+.heading h2 {
+  font-size: 6rem;
+  font-family: "General Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 100%;
+  animation: appearFromBottom 1s ease-out 1s forwards;
+}
+
+@keyframes appearFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at its original position */
+  }
+}
+
+.text {
+  font-size: 1.125rem;
+  letter-spacing: 160%;
+  font-weight: 400;
+}
+
+.teamContainer {
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  border: 1px dotted red;
+}
+
+.teamContainer h3{
+  font-family: "General Sans" sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.teamImage img {
+  width: 270px;
+  height: 400px;
+}
+
+.teamPosition{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  margin: 10px 0;
+}
+
+.teamPosition p{
+  font-family: "ROBOTO MONO" sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.socialMedia {
+  display: flex;
+}
+
+.description{
+  font-size: 1.2rem;
+  line-height: 150%;
+  font-weight: 300;
+  color: rgba(17, 17, 17, .5)
+}
