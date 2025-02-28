@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+  <style>
+    body {
+      position: relative;
+      height: 100vh;
+    }
+
+    #para {
+      color: red;
+      font-size: 16px;
+    }
+
+    #btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <h1>Font Increase</h1>
+  <p id="para">Hey! How are you?</p>
+  <button id="btn" onclick="handleIncrease()">Increase Font</button>
+
+  <script>
+    let btn = document.querySelector("#btn");
+    let para = document.querySelector("#para");
+
+    function handleIncrease() {
+      let currentFontSize = window.getComputedStyle(para).fontSize; // Get the current font size as a string
+      currentFontSize = parseInt(currentFontSize); // Convert it to an integer by removing the 'px' part
+      currentFontSize += 2; // Increase the font size by 2px
+      para.style.fontSize = `${currentFontSize}px`; // Apply the new font size
+    }
+  </script>
+</body>
+</html>
