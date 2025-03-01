@@ -1,5 +1,6 @@
 /* Font Style */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +22,7 @@ footer {
 }
 
 .footerSection {
+
   border: 1px solid white;
   display: flex;
   justify-content: center;
@@ -60,6 +62,7 @@ footer {
   font-size: 10px;
   font-weight: 200;
 }
+
 .section2 h2,
 .section3 h2,
 .section4 h2 {
@@ -84,6 +87,7 @@ footer {
   padding: 10px;
   width: 90%;
 }
+
 .name p {
   font-size: 6px;
   font-weight: 100;
@@ -124,19 +128,23 @@ button .material-symbols-outlined {
 @media screen and (max-width: 991px) {
   .footerContainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns layout */
     padding: 4rem 0px;
-    border: 1px solid blue; /* Blue border for this size */
+    border: 1px solid blue;    /* Blue border for this size */
   }
+
 }
 
 /* For screens up to 767px but greater than 492px */
 @media screen and (max-width: 767px) {
   .footerContainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns layout */
     padding: 2rem 0px;
-    border: 1px solid orange; /* Orange border for this size */
+    border: 1px solid orange;
+    /* Orange border for this size */
   }
 }
 
@@ -144,9 +152,11 @@ button .material-symbols-outlined {
 @media screen and (max-width: 492px) {
   .footerContainer {
     display: grid;
-    grid-template-columns: 1fr; /* Single column */
+    grid-template-columns: 1fr;
+    /* Single column */
     padding: 1rem 0px;
-    border: 1px solid red; /* Red border for this size */
+    border: 1px solid red;
+    /* Red border for this size */
   }
 
   .nav-item li {
